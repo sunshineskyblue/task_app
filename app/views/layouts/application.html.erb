@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main_container">
+      <header class="header">
+        <div class="title">MySchedule</div>
+      </header>
+
+      <%= yield %>
+    </div>
+      
+      <footer class="footer">
+        <div class="footer-item-date">
+          <span>現在の日時：</span>
+          <span><%= Date.today.strftime("%Y年%m月%d日 (#{t("date.abbr_day_names")[Date.today.wday]})") %></span>
+        </div>
+        <div class="footer-item-total">
+          <span>スケジュール合計：</span>
+          <span><%= Task.count %></span>
+        </div>
+      </footer>
   </body>
 </html>

@@ -1,0 +1,42 @@
+<h3 class="Table_title">スケジュール詳細</h3>
+
+<div class="schedule_list">
+  <p class="schedule_show_update"><%= link_to "スケジュールの編集", [:edit, @task] %></p>
+  <p class="schedule_show_destroy"><%= link_to "スケジュールの削除", @task, method: :delete, data: { confirm: "本当に削除しますか？" } %></p>
+  
+  <table class="table_schedule table_show">
+    <tr>
+      <th>タイトル</th>
+      <td><%= @task.title %></td>
+    </tr>
+    <tr>
+      <th>開始日時</th>
+      <td>
+        <span><%= @task.day_start.strftime("%Y年%m月%d日 (#{t("date.abbr_day_names")[@task.day_start.wday]}) %H時%M分") %></span>
+      </td>
+    </tr>
+    <tr>
+      <th>終了日時</th>
+      <td>
+        <span><%= @task.day_end.strftime("%Y年%m月%d日 (#{t("date.abbr_day_names")[@task.day_end.wday]}) %H時%M分") %></span>
+    </tr>
+      </td>
+      
+    <tr>
+      <th>更新日時</th>
+      <td><%= @task.updated_at.strftime("%Y年%m月%d日 (#{t("date.abbr_day_names")[@task.updated_at.wday]}) %H時%M分") %></td>
+    </tr>
+    <tr>
+      <th>終日</th>
+      <td><%= @task.day_all ? '○' : '' %></td>
+    </tr>
+    <tr>
+      <th>メモ</th>
+      <td><%= @task.memo %></td>
+    </tr>
+  </table>
+  
+  <div class="button_schedule">
+    <p><%= link_to"スケジュール一覧へ", :tasks %></p>
+  </div>
+</div>

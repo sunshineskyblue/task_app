@@ -1,0 +1,48 @@
+<h3 class="Table_title">スケジュール新規作成</h3>
+
+<%= render "shared/error", obj: @task %> 
+
+<% if flash[:error_notice] %>
+  <p class="notice"><%= flash[:error_notice] %></p>
+<% end %>
+
+<%= form_with model:@task do |f| %>
+  <table class="table_schedule">
+    <tr>
+      <th><%= f.label:title, "タイトル" %></th>
+      <td><%= f.text_field:title %></td>
+    </tr>
+    <tr>
+      <th><%= f.label:day_start, "開始日時" %></th>
+      <td>
+        <span class="date_length"><%= f.datetime_select:day_start %></span>
+      </td>
+    </tr>
+    <tr>
+      <th><%= f.label:day_end, "終了日時" %></th>
+      <td>
+        <span class="date_length"><%= f.datetime_select:day_end %></span>
+      </td>
+    </tr>
+    <tr>
+      <th><%= f.label:day_all, "終日" %></th>
+      <td>
+        <div class="checkbox">
+          <%= f.check_box:day_all %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><%= f.label:memo, "メモ" %></th>
+      <td><%= f.text_area:memo  %></td>
+    </tr>
+  </table>
+  
+  <div class="button_schedule">
+    <ul>
+      <li id="button"><%= f.submit"登録する" %></li>
+      <li><%= link_to"スケジュール一覧へ", :tasks %></li>
+    </ul>
+  </div>
+<% end %>
+  

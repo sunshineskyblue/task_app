@@ -1,0 +1,29 @@
+.table_show td {
+  text-align:center;
+}
+
+.table_show {
+  margin-top:60px;
+}
+
+.schedule_list{
+  position:relative;
+}
+
+.schedule_show_update{
+  right:320px;
+  top:-50px;
+  position:absolute;
+  font-weight:bold;
+  font-size:15px;
+  text-decoration:none;
+}
+
+.schedule_show_destroy{
+  right:320px;
+  top:-30px;
+  position:absolute;
+  font-weight:bold;
+  font-size:15px;
+  text-decoration:none;
+}
