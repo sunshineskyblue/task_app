@@ -1,0 +1,34 @@
+document.addEventListener('turbolinks:load', function() { 
+  const checkbox = document.querySelector('input[type="checkbox"]');
+  const endTime_left = document.getElementById('task_day_start_4i');
+  const endTime_right = document.getElementById('task_day_start_5i');
+  const startTime_left = document.getElementById('task_day_end_4i');
+  const startTime_right = document.getElementById('task_day_end_5i');
+      
+  if (checkbox) {
+    checkbox.addEventListener ("click", () => {
+    endTime_left.options[0].selected = true;
+    endTime_right.options[0].selected = true;
+    endTime_left.classList.toggle('event_off');
+    endTime_right.classList.toggle('event_off');
+    startTime_left.options[0].selected = true;
+    startTime_right.options[0].selected = true;
+    startTime_left.classList.toggle('event_off');
+    startTime_right.classList.toggle('event_off');
+    });
+    if (checkbox.checked) {
+      if(!endTime_left.classList.contains('event_off')) {
+        endTime_left.classList.add('event_off');
+      };
+      if(!endTime_right.classList.contains('event_off')) {
+        endTime_right.classList.add('event_off');
+      };
+      if(!startTime_left.classList.contains('event_off')) {
+        startTime_left.classList.add('event_off');
+      };
+      if(!startTime_right.classList.contains('event_off')) {
+        startTime_right.classList.add('event_off');
+      };
+    };
+  };
+});

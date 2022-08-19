@@ -1,0 +1,158 @@
+html, body, header,footer, ul, li, p, h1, h2, h3 {
+  margin:0;
+  font-family:verdana, sans-serif;
+}
+
+a {
+  text-decoration:none;
+}
+
+.header {
+ // position:fixed;
+ // top:0;
+ // z-index: 1;
+  background-color: green;
+  height:75px;
+  width:100%;
+  display:flex;
+  align-items:center;
+}
+
+
+.title {
+ font-size:38px;
+ color:white;
+ position:absolute;
+ padding-left:50px;
+}
+
+.main_container {
+ position:relative;
+ min-height:calc(100vh - 60px);
+}
+
+.footer {
+   display:flex;
+   justify-content: space-between;
+   align-items:center;
+   background-color: green;
+   height: 60px;
+   color:white;
+   font-size: 22px;
+   width:100%;
+}
+
+.footer-item-date{
+ padding-left:40px;
+}
+
+.footer-item-total{
+ padding-right:60px;
+}
+
+
+/*詳細・編集・登録画面*/
+
+.Table_title{
+ text-align:center;
+ margin-top:30px;
+ padding-left:30px;
+}
+
+.table_schedule {
+  border:solid 0.4px;
+  margin:35px auto 30px;
+  border-spacing: 0px;
+}
+
+.table_schedule td, .table_schedule th {
+  border: solid 0.4px;
+  padding:10px;
+}
+
+.table_schedule td {
+  width:500px;
+  background-color: #f9ecd5;
+}
+
+.table_schedule th{
+  width:100px;
+  background-color: #fbc25b;
+}
+
+.table_schedule input[type="text"]{
+  width:470px;
+  height:32px;
+  padding-left:5px;
+  margin-left:8px;
+  font-size:16px;
+}
+
+.table_schedule .field_with_errors {
+  display:contents;
+}
+
+.date_length {
+ margin-left:8px;
+ margin-right:30px;
+}
+
+select {
+  height:31px;
+  font-size:14px;
+}
+
+form {
+ display:contents;
+}
+
+.checkbox {
+  display:flex;
+  justify-content:center;
+}
+
+.table_schedule input[type="checkbox"] {
+  width:20px;
+  height:20px;
+}
+
+
+.table_schedule textarea {
+  width:470px;
+  padding-left:5px;
+  height:100px;
+  margin-left:10px;
+}
+
+
+.button_schedule {
+ text-align:center;
+ padding-top:10px;
+ padding-bottom:20px;
+ padding-left: 30px;
+}
+
+
+.button_schedule ul {
+ list-style:none;
+ padding:0;
+}
+
+.button_schedule input[type="submit"] {
+  width:150px;
+  height:30px;
+  font-size:17px;
+  padding:0px;
+}
+
+.button_schedule li:nth-child(2) {
+  margin-top:35px;
+  font-size:16px;
+}
+
+
+// pointer-eventsセット用
+
+.event_off {
+   pointer-events: none;
+}

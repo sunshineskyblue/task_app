@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  day_start: 2022-08-15
+  time_start: 2022-08-15 22:41:49
+  day_end: 2022-08-15
+  time_end: 2022-08-15
+  day_all: false
+  memo: MyString
+
+two:
+  title: MyString
+  day_start: 2022-08-15
+  time_start: 2022-08-15 22:41:49
+  day_end: 2022-08-15
+  time_end: 2022-08-15
+  day_all: false
+  memo: MyString
