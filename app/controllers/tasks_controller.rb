@@ -29,7 +29,7 @@ class TasksController < ApplicationController
   
   def update
     @task = Task.find(params[:id])
-    
+
     if @task.update(params.require(:task).permit(:title, :day_start, :day_end, :day_all, :memo))
        flash[:notice] = "スケジュールを更新しました"
        redirect_to :tasks

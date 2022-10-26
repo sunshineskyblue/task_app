@@ -29,9 +29,9 @@
             <span><%= task.day_end.strftime("%Y年%m月%d日 (#{t("date.abbr_day_names")[task.day_end.wday]}) %H時%M分") %></span>
             </td>
           <td><%= task.day_all ? '○' : '' %></td>
-          <td><%= link_to "詳細", task %></td>
+          <td><%= link_to "詳細", task_path(task) %></td>
           <td><%= link_to "編集", [:edit, task] %></td>
-          <td><%= link_to "削除", task, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+          <td><%= link_to "削除", task_path(task), method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
         </tr>
       <% end %>
     </tbody>

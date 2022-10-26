@@ -9,14 +9,15 @@ document.addEventListener('turbolinks:load', function() {
     checkbox.addEventListener ("click", () => {
     endTime_left.options[0].selected = true;
     endTime_right.options[0].selected = true;
-    endTime_left.classList.toggle('event_off');
-    endTime_right.classList.toggle('event_off');
     startTime_left.options[0].selected = true;
     startTime_right.options[0].selected = true;
+    endTime_left.classList.toggle('event_off');
+    endTime_right.classList.toggle('event_off');
     startTime_left.classList.toggle('event_off');
     startTime_right.classList.toggle('event_off');
     });
-    if (checkbox.checked) {
+
+    if (checkbox.checked) {  // チェックボックスのチェック有りの場合、edit時に入力不可とする
       if(!endTime_left.classList.contains('event_off')) {
         endTime_left.classList.add('event_off');
       };
